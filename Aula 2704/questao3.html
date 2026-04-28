@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Isaac</title>
+</head>
+
+<body>
+    <h1>CALCULADORA</h1>
+    <hr><!-- linha horizontal-->
+    <form action="">
+        Número1:<br />
+        <input type="text" id="n1"><br />
+        Número2:<br />
+        <input type="text" id="n2"><br />
+        Número3:<br />
+        <input type="text" id="n3"><br />
+        <button type="button" onclick="calculadora()">Calcular</button>
+        <button type="reset">Limpar </button><br />
+
+        Resultado: <br />
+        <input type="text" id="resposta" readonly="readonly"><br />
+
+    </form>
+    <script>
+        function calculadora() {
+            //ENTRADA DE DADOS -> RECEBENDO DADOS DO HML
+            let x = parseInt(document.getElementById("n1").value);
+            let y = parseInt(document.getElementById("n2").value);
+            let z = parseInt(document.getElementById("n3").value);
+            //PROCESSAMENTO
+            let numeromaior = n1,n2,n3;
+            //SAIDA
+            document.getElementById("resposta").value = numeromaior
+
+
+
+
+        }
+    </script>
+</body>
+
+</html>

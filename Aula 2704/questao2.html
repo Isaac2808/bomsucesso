@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Isaac</title>
+</head>
+
+<body>
+    <h1>CALCULADORA</h1>
+    <hr><!-- linha horizontal-->
+    <form action="">
+        Número1:<br />
+        <input type="text" id="n1"><br />
+        Número2:<br />
+        <input type="text" id="n2"><br />
+        <button type="button" onclick="calculadora()">Calcular</button>
+        <button type="reset">Limpar </button><br />
+
+        Resultado: <br />
+        <input type="text" id="resposta" readonly="readonly"><br />
+        Media: <br />
+        <input type="text" id="resposta1"><br />
+        Media aridimetica: <br />
+        <input type="text" id="resultado"><br />
+
+    </form>
+    <script>
+        function calculadora() {
+            //ENTRADA DE DADOS -> RECEBENDO DADOS DO HML
+            let x = parseInt(document.getElementById("n1").value);
+            let y = parseInt(document.getElementById("n2").value);
+        
+
+            //PROCESSAMENTO
+            let soma = x + y;
+            let media = soma / 2;
+            //SAIDA
+            document.getElementById("resposta").value = soma
+
+            document.getElementById("resposta1").value = media
+
+            //Estrutura de condição
+            if (media >= 7) {
+                document.getElementById("resultado").value = "Aprovado";
+            } else {
+                document.getElementById("resultado").value = "Reprovado";
+            }
+        }
+    </script>
+</body>
+
+</html>
